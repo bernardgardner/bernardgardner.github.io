@@ -1,7 +1,7 @@
 <html>
   <head>
-    <!--<script><esi:include src="/__request_id" /><esi:remove>rs_request_id=secure.randomUUID(); console.log("ESI Failed - locally set rs_request_id="+rs_request_id)</script>-->
-    <script>rs_request_id=secure.randomUUID()</script>
+    <!--<esi:include src="/__request_id" /><esi:remove><script>rs_request_id=crypto.randomUUID(); console.log("ESI Failed - locally set rs_request_id="+rs_request_id)</script></esi:remove>-->
+    <script>rs_request_id=crypto.randomUUID()</script>
   </head>
   <body>
     <h1>ESI example</h1>
