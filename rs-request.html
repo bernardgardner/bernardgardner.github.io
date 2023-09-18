@@ -1,4 +1,4 @@
-ssion<html>
+<html>
   <head>
     <esi:include src="/__request_id" /><esi:remove><script>sessionStorage.setItem("pageViewId", crypto.randomUUID()+" local"); console.log("ESI Failed - locally set rs_request_id="+sessionStorage.getItem("pageViewId"))</script></esi:remove>
   </head>
