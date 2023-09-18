@@ -4,6 +4,7 @@ ssion<html>
   </head>
   <body>
     <h1>ESI example</h1>
-    <p><button onclick='alert("rs_request_id="+sessionStorage.getItem("pageViewId"))'>Click me</button></p>
+    <p><button onclick='alert("rs_request_id="+sessionStorage.getItem("pageViewId"))'>Session ID Popup</button></p>
+    <p><button onclick='for (let i = 0; i < localStorage.length; i++) { console.log(SessionStorage.key(i) + " : " + localStorage.getItem(localStorage.key(i)));}'>Dump session storage to console</button></p>
   </body>
 </html>
