@@ -1,9 +1,9 @@
-<html>
+ssion<html>
   <head>
-    <esi:include src="/__request_id" /><esi:remove><script>rs_request_id=crypto.randomUUID()+" local"; console.log("ESI Failed - locally set rs_request_id="+rs_request_id)</script></esi:remove>
+    <esi:include src="/__request_id" /><esi:remove><script>sessionStorage.setItem("pageViewId", crypto.randomUUID()+" local"); console.log("ESI Failed - locally set rs_request_id="+sessionStorage.getItem("pageViewId")</script></esi:remove>
   </head>
   <body>
     <h1>ESI example</h1>
-    <p><button onclick='alert("rs_request_id="+rs_request_id)'>Click me</button></p>
+    <p><button onclick='alert("rs_request_id="+sessionStorage.getItem("pageViewId")'>Click me</button></p>
   </body>
 </html>
